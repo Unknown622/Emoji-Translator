@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Emoji-Translator</string>
+    <string name="app_name">Text to Emoji Translator</string>
+    <string name="description">Start typing in the top box, then tap translate to turn your message into emojis.</string>
 </resources>

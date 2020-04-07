@@ -1,7 +1,5 @@
 package com.example.emojitranslator;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;

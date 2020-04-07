@@ -6,4 +6,159 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".Settings">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Settings"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Translation Options:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Emoji Options:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTranslationOptions" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Gender:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Skin Color:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderOptions" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTranslationOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/translationOptionClassic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classic (puts emojis next to words)"
+            android:textColor="#606060"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/translationOptionReplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Replace (replaces words with emojis)"
+            android:textColor="#606060"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/genderOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <RadioButton
+            android:id="@+id/genderOptionMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="#606060"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/genderOptionFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="#606060"
+            android:textSize="14sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/skinColorOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+        <RadioButton
+            android:id="@+id/skinOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👍" />
+
+        <RadioButton
+            android:id="@+id/skinOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👍🏻" />
+
+        <RadioButton
+            android:id="@+id/skinOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👍🏼" />
+
+        <RadioButton
+            android:id="@+id/skinOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👍🏽" />
+
+        <RadioButton
+            android:id="@+id/skinOption5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👍🏾" />
+
+        <RadioButton
+            android:id="@+id/skinOption6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👍🏿" />
+
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

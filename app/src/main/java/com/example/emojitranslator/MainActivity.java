@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.*;
 import android.os.Bundle;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity
 {
-    private Button settingsButton, copyButton;
-    private TextView output;
+    private EditText output, input;
     private Settings settings;
 
     @Override
@@ -20,10 +21,35 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button settingsButton, copyButton, clearButton, translate;
+
         settings = Settings.instance();
         output = findViewById(R.id.outputText);
+        input = findViewById(R.id.inputText);
+        copyButton = findViewById(R.id.btnCopy);
         settingsButton = findViewById(R.id.btnSettings);
+        clearButton = findViewById(R.id.btnClear);
+        translate = findViewById(R.id.btnTranslate);
+        settings = Settings.instance();
 
+        clearButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                input.setText("");
+                output.setText("");
+            }
+        });
+
+        translate.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                translate();
+            }
+        });
 
         settingsButton.setOnClickListener(new View.OnClickListener()
         {
@@ -34,7 +60,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        copyButton = findViewById(R.id.btnCopy);
         copyButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -54,5 +79,10 @@ public class MainActivity extends AppCompatActivity
     {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+    public void translate()
+    {
+        output.setText(input.getText());
     }
 }

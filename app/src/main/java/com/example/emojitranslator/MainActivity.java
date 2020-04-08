@@ -65,9 +65,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                String outputString = output.getText().toString();
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("Translation", outputString);
+                ClipData clip = ClipData.newPlainText("Translation", output.getText().toString());
                 clipboard.setPrimaryClip(clip);
 
                 Toast.makeText(getApplicationContext(), "Copied to clipboard", Toast.LENGTH_SHORT).show();

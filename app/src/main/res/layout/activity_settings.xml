@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Settings">
+tools:context=".SettingsActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -75,6 +75,7 @@ tools:context=".Settings">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Classic (puts emojis next to words)"
+            android:onClick="checkTranslation"
             android:textColor="#606060"
             android:textSize="14sp" />
 
@@ -83,6 +84,7 @@ tools:context=".Settings">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Replace (replaces words with emojis)"
+            android:onClick="checkTranslation"
             android:textColor="#606060"
             android:textSize="14sp" />
     </RadioGroup>
@@ -101,6 +103,7 @@ tools:context=".Settings">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
+            android:onClick="checkGender"
             android:textColor="#606060"
             android:textSize="14sp" />
 
@@ -109,6 +112,7 @@ tools:context=".Settings">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
+            android:onClick="checkGender"
             android:textColor="#606060"
             android:textSize="14sp" />
 
@@ -127,36 +131,42 @@ tools:context=".Settings">
             android:id="@+id/skinOption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkSkinColor"
             android:text="👍" />
 
         <RadioButton
             android:id="@+id/skinOption2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkSkinColor"
             android:text="👍🏻" />
 
         <RadioButton
             android:id="@+id/skinOption3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkSkinColor"
             android:text="👍🏼" />
 
         <RadioButton
             android:id="@+id/skinOption4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkSkinColor"
             android:text="👍🏽" />
 
         <RadioButton
             android:id="@+id/skinOption5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkSkinColor"
             android:text="👍🏾" />
 
         <RadioButton
             android:id="@+id/skinOption6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkSkinColor"
             android:text="👍🏿" />
 
     </RadioGroup>

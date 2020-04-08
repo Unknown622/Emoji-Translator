@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity
 {
     private Button settingsButton, copyButton;
     private TextView output;
+    private Settings settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -19,9 +20,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        settings = Settings.instance();
         output = findViewById(R.id.outputText);
-
         settingsButton = findViewById(R.id.btnSettings);
+
+
         settingsButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -41,13 +44,15 @@ public class MainActivity extends AppCompatActivity
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("Translation", outputString);
                 clipboard.setPrimaryClip(clip);
+
+                Toast.makeText(getApplicationContext(), "Copied to clipboard", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     public void openSettings()
     {
-        Intent intent = new Intent(this, Settings.class);
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }

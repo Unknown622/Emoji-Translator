@@ -1,19 +1,19 @@
 package com.example.emojitranslator;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.*;
 import android.os.Bundle;
-
-import org.w3c.dom.Text;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
     private EditText output, input;
-    private Settings settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,16 +21,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button settingsButton, copyButton, clearButton, translate;
+        Button copyButton, clearButton, translate;
 
-        settings = Settings.instance();
         output = findViewById(R.id.outputText);
         input = findViewById(R.id.inputText);
         copyButton = findViewById(R.id.btnCopy);
-        settingsButton = findViewById(R.id.btnSettings);
         clearButton = findViewById(R.id.btnClear);
         translate = findViewById(R.id.btnTranslate);
-        settings = Settings.instance();
 
         clearButton.setOnClickListener(new View.OnClickListener()
         {
@@ -51,15 +48,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        settingsButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                openSettings();
-            }
-        });
-
         copyButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -69,15 +57,50 @@ public class MainActivity extends AppCompatActivity
                 ClipData clip = ClipData.newPlainText("Translation", output.getText().toString());
                 clipboard.setPrimaryClip(clip);
 
+                //Show confirmation message
                 Toast.makeText(getApplicationContext(), "Copied to clipboard", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    public void openSettings()
+    public void openSettings(View v)
     {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+    public void speechToText(View v)
+    {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+
+        if (intent.resolveActivity(getPackageManager()) != null)
+        {
+            startActivityForResult(intent, 10);
+        }
+
+        else
+        {
+            //Shows error message
+            Toast.makeText(getApplicationContext(), "Sorry, your device doesn't support this", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode)
+        {
+            case 10:
+                if (resultCode == RESULT_OK && data != null)
+                {
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    input.setText(result.get(0));
+                }
+                break;
+        }
     }
 
     public void translate()

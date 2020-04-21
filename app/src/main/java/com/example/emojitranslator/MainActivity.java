@@ -6,14 +6,18 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
+import android.text.Editable;
 import android.view.View;
 import android.widget.*;
 import android.os.Bundle;
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity
 {
     private EditText output, input;
+    private EmojiList emojis = EmojiList.instance();
+    private Settings settings = Settings.instance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -69,6 +73,12 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void openSearch(View v)
+    {
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+    }
+
     public void speechToText(View v)
     {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -82,7 +92,7 @@ public class MainActivity extends AppCompatActivity
         else
         {
             //Shows error message
-            Toast.makeText(getApplicationContext(), "Sorry, your device doesn't support this", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Sorry, your device doesn't support this.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -98,13 +108,100 @@ public class MainActivity extends AppCompatActivity
                 {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     input.setText(result.get(0));
+                    translate();
                 }
                 break;
         }
     }
 
-    public void translate()
+    private void translate()
     {
-        output.setText(input.getText());
+        if (settings.isClassic())
+            translateClassic();
+
+        else
+            translateReplace();
+    }
+
+    private void translateReplace()
+    {
+        Editable inputEditable = input.getText();
+        String inputText = inputEditable.toString();
+        Vector<String> vector = stringToVector(inputText);
+
+        for (int i = 0; i < vector.size(); ++i)
+        {
+            String emoji = emojis.searchEmojis(vector.get(i));
+
+            if (emoji != null)
+                vector.set(i, emoji);
+        }
+
+        output.setText(vectorToString(vector));
+    }
+
+    private void translateClassic()
+    {
+        Editable inputEditable = input.getText();
+        String inputText = inputEditable.toString();
+        Vector<String> vector = stringToVector(inputText);
+
+        for (int i = 0; i < vector.size(); ++i)
+        {
+            if (Character.isLetter(vector.get(i).charAt(0)))
+            {
+                String emoji = emojis.searchEmojis(vector.get(i));
+
+                if (emoji != null)
+                {
+                    vector.insertElementAt(emoji, i + 1);
+                    ++i;
+                }
+            }
+        }
+
+        output.setText(vectorToString(vector));
+    }
+
+    private String vectorToString(Vector<String> vector)
+    {
+        String outputString = "";
+
+        for (int i = 0; i < vector.size(); ++i)
+        {
+            outputString += vector.elementAt(i);
+        }
+
+        return outputString;
+    }
+
+    private Vector<String> stringToVector(String string)
+    {
+        String word = "";
+        Vector<String> vector = new Vector<>();
+
+        for (int i = 0; i < string.length(); ++i)
+        {
+            if (Character.isLetter(string.charAt(i)))
+                word += string.charAt(i);
+
+            else
+            {
+                if (!word.equals(""))
+                {
+                    vector.add(word);
+                    word = "";
+                }
+
+                vector.add(Character.toString(string.charAt(i)));
+            }
+        }
+
+        if (!word.equals(""))
+        {
+            vector.add(word);
+        }
+
+        return vector;
     }
 }

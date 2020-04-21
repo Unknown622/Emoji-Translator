@@ -23,6 +23,8 @@ public class SearchActivity extends AppCompatActivity
         setContentView(R.layout.activity_search);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Search Emojis");
+
         fillList();
         setUpRecyclerView();
     }

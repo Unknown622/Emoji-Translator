@@ -12,12 +12,13 @@ import android.widget.*;
 import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.Vector;
+import android.app.Activity;
+import android.view.inputmethod.*;
 
 public class MainActivity extends AppCompatActivity
 {
     private EditText output, input;
     private EmojiList emojis = EmojiList.instance();
-    private Settings settings = Settings.instance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 translate();
+                hideKeyboard();
             }
         });
 
@@ -114,9 +116,18 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    public void hideKeyboard()
+    {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+
     private void translate()
     {
-        if (settings.isClassic())
+        if (Settings.instance().isClassic())
             translateClassic();
 
         else

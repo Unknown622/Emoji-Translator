@@ -79,11 +79,11 @@ public class EmojiList
         add("👋", "👋🏻", "👋🏼", "👋🏽", "👋🏾",
                 "👋🏿", description1, 3);
 
-        String[] description2 = {"oop", "oops", "shrug", "shrugging", "meh"};
+        String[] description2 = {"oop", "oops", "shrug", "shrugging"};
         add("🤷‍♀️", "🤷🏻‍♀️", "🤷🏼‍♀️", "🤷🏽‍♀️",
                 "🤷🏾‍♀️", "🤷🏿‍♀️", "🤷‍♂️", "🤷🏻‍♂️",
                 "🤷🏼‍♂️", "🤷🏽‍♂️", "🤷🏾‍♂️", "🤷🏿‍♂️",
-                description2, 5);
+                description2, 4);
 
         String[] description3 = {"lol", "lmao"};
         add("😂", description3, 2);

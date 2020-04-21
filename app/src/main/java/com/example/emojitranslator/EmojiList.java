@@ -71,24 +71,37 @@ public class EmojiList
 
     private void populate()
     {
-        String[] description = {"good"};
         add("👍", "👍🏻", "👍🏼", "👍🏽", "👍🏾",
-                "👍🏿", description, 1);
+                "👍🏿", new String[] {"good"}, 1);
 
-        String[] description1 = {"hello", "goodbye", "hi"};
         add("👋", "👋🏻", "👋🏼", "👋🏽", "👋🏾",
-                "👋🏿", description1, 3);
+                "👋🏿", new String[] {"hello", "goodbye", "hi"}, 3);
 
-        String[] description2 = {"oop", "oops", "shrug", "shrugging"};
         add("🤷‍♀️", "🤷🏻‍♀️", "🤷🏼‍♀️", "🤷🏽‍♀️",
                 "🤷🏾‍♀️", "🤷🏿‍♀️", "🤷‍♂️", "🤷🏻‍♂️",
                 "🤷🏼‍♂️", "🤷🏽‍♂️", "🤷🏾‍♂️", "🤷🏿‍♂️",
-                description2, 4);
+                new String[] {"oop", "oops", "shrug", "shrugging"}, 4);
 
-        String[] description3 = {"lol", "lmao"};
-        add("😂", description3, 2);
+        add("😂", new String[] {"lol", "lmao"}, 2);
 
-        String[] description4 = {"house", "home"};
-        add("🏠", description4, 2);
+        add("🏠", new String[] {"house", "home"}, 2);
+
+        add("😀", new String[] {"happy", "grin", "grinning", "smiling", "smile"},
+                5);
+
+        add("\uD83D\uDE03", new String[] {"happy", "grin", "grinning", "smiling", "smile"},
+                5);
+
+        add("\uD83D\uDE04", new String[] {"happy", "grin", "grinning", "smiling", "smile"},
+                5);
+
+        add("\uD83D\uDE01", new String[] {"happy", "grin", "grinning", "smiling", "smile"},
+                5);
+
+        add("\uD83D\uDE06", new String[] {"happy", "grin", "grinning", "smiling", "smile",
+                "laugh", "laughing"}, 7);
+
+        add("\uD83D\uDE05", new String[] {"embarrassed", "embarrassing", "whew", "nervous"},
+                4);
     }
 }

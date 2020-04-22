@@ -22,14 +22,14 @@ public class EmojiList
             return instance;
     }
 
-    public void add(String emoji1, String emoji2, String emoji3, String emoji4, String emoji5,
+    private void add(String emoji1, String emoji2, String emoji3, String emoji4, String emoji5,
                     String emoji6, String[] description, int descriptionLength)
     {
         emojis.add(new Emoji(emoji1, emoji2, emoji3, emoji4, emoji5, emoji6, description,
                 descriptionLength));
     }
 
-    public void add(String emoji1Female, String emoji2Female, String emoji3Female, String emoji4Female,
+    private void add(String emoji1Female, String emoji2Female, String emoji3Female, String emoji4Female,
                  String emoji5Female, String emoji6Female, String emoji1Male, String emoji2Male,
                  String emoji3Male, String emoji4Male, String emoji5Male, String emoji6Male,
                  String[] description, int descriptionLength)
@@ -39,7 +39,7 @@ public class EmojiList
                 description, descriptionLength));
     }
 
-    public void add(String emoji, String[] description, int descriptionLength)
+    private void add(String emoji, String[] description, int descriptionLength)
     {
         emojis.add(new Emoji(emoji, description, descriptionLength));
     }
@@ -103,5 +103,40 @@ public class EmojiList
 
         add("\uD83D\uDE05", new String[] {"embarrassed", "embarrassing", "whew", "nervous"},
                 4);
+
+        add("\uD83E\uDD23", new String[] {"lmfao", "rofl", "laugh", "laughing"},
+                2);
+
+        add("\uD83D\uDE42", new String [] {"fine", "patronizing", "patronize"},
+                1);
+
+        add("\uD83D\uDE43", new String[] {"silly", "sarcastic", "goofy", "ironic"},
+                4);
+
+        add("\uD83D\uDE09", new String[] {"ironic", "playful", "wink", "winking", "joke",
+                "joking"}, 6);
+
+        add("\uD83D\uDE0A", new String[] {"happy", "happiness", "genuine", "smile", "smiling"},
+                5);
+
+        add("\uD83D\uDE07", new String[] {"angel", "angelic", "blessing", "halo"},
+                4);
+
+        add("\uD83E\uDD70", new String[] {"love", "affection", "affectionate"}, 3);
+
+        add("\uD83D\uDE0D", new String[] {"love", "infatuation", "infatuated", "adore",
+                "adoration"}, 5);
+
+        add("\uD83E\uDD29", new String[] {"excited", "excitement", "amazement", "amazed",
+                        "wow", "starstruck", "star-struck"}, 5);
+
+        add("\uD83D\uDE18", new String[] {"kiss", "kissing", "love"}, 3);
+
+        add("\uD83D\uDE17", new String[] {"whistle", "whistling", "kissing", "surprise",
+                "surprising"}, 5);
+
+        add("☺️", new String[] {"warm", "positive", "grateful", "love"}, 4);
+
+        add("\uD83D\uDE1A", new String[] {"kiss", "kissing", "kissy"}, 3);
     }
 }

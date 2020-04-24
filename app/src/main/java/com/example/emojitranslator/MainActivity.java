@@ -193,7 +193,8 @@ public class MainActivity extends AppCompatActivity
 
         for (int i = 0; i < string.length(); ++i)
         {
-            if (Character.isLetter(string.charAt(i)))
+            if (Character.isLetter(string.charAt(i)) || Character.isDigit(string.charAt(i)) ||
+                string.charAt(i) == '-')
                 word += string.charAt(i);
 
             else

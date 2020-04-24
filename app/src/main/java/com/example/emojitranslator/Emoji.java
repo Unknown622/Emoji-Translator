@@ -44,6 +44,7 @@ public class Emoji
         this.description = description;
         this.descriptionLength = descriptionLength;
         hasMultipleSkin = true;
+        hasGender = true;
     }
 
     public Emoji(String emoji, String[] description, int descriptionLength)

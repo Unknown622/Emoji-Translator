@@ -75,14 +75,14 @@ public class EmojiList
                 "👍🏿", new String[] {"good"}, 1);
 
         add("👋", "👋🏻", "👋🏼", "👋🏽", "👋🏾",
-                "👋🏿", new String[] {"hello", "goodbye", "hi"}, 3);
+                "👋🏿", new String[] {"hello", "goodbye", "hi", "hey"}, 4);
 
         add("🤷‍♀️", "🤷🏻‍♀️", "🤷🏼‍♀️", "🤷🏽‍♀️",
                 "🤷🏾‍♀️", "🤷🏿‍♀️", "🤷‍♂️", "🤷🏻‍♂️",
                 "🤷🏼‍♂️", "🤷🏽‍♂️", "🤷🏾‍♂️", "🤷🏿‍♂️",
                 new String[] {"oop", "oops", "shrug", "shrugging"}, 4);
 
-        add("😂", new String[] {"lol", "lmao"}, 2);
+        add("😂", new String[] {"lol", "lmao", "funny", "laughing"}, 4);
 
         add("🏠", new String[] {"house", "home"}, 2);
 
@@ -104,8 +104,8 @@ public class EmojiList
         add("\uD83D\uDE05", new String[] {"embarrassed", "embarrassing", "whew", "nervous"},
                 4);
 
-        add("\uD83E\uDD23", new String[] {"lmfao", "rofl", "laugh", "laughing"},
-                2);
+        add("\uD83E\uDD23", new String[] {"lmfao", "rofl", "laugh", "laughing", "funny"},
+                5);
 
         add("\uD83D\uDE42", new String [] {"fine", "patronizing", "patronize"},
                 1);
@@ -138,5 +138,82 @@ public class EmojiList
         add("☺️", new String[] {"warm", "positive", "grateful", "love"}, 4);
 
         add("\uD83D\uDE1A", new String[] {"kiss", "kissing", "kissy"}, 3);
+
+        add("\uD83D\uDE19", new String[] {"kiss", "kissing", "whistle", "whistling"},
+                4);
+
+        add("\uD83D\uDE0B", new String[] {"goofy", "hungry", "delicious", "attractive"},
+                4);
+
+        add("\uD83E\uDDA0", new String[] {"coronavirus", "rona", "covid-19", "covid19", "cell",
+            "germ", "virus", "bacteria", "disease"}, 9);
+
+        add("\uD83D\uDE1B", new String[] {"cheeky", "tongue", "fun", "silly", "silliness",
+            "excited", "exciting", "excitement", "jk"}, 9);
+
+        add("\uD83D\uDE1C", new String[] {"fun", "crazy", "craziness", "joke", "joking", "wacky",
+            "wackiness"}, 7);
+
+        add("\uD83D\uDE34", new String[] {"sleep", "sleeping", "snoring", "bored", "boredom",
+            "snooze"}, 6);
+
+        add("\uD83D\uDE37", new String[] {"mask", "coronavirus", "rona", "covid19", "covid-19"},
+                5);
+
+        add("\uD83E\uDD12", new String[] {"sick", "flu", "cold", "fever"}, 4);
+
+        add("\uD83E\uDD15", new String[] {"injury", "injured", "clumsy", "pain", "hurt",
+                "hurting"}, 6);
+
+        add("\uD83E\uDD22", new String[] {"ill", "illness", "disgust", "nauseated", "nauseous",
+                "nasty"}, 6);
+
+        add("\uD83E\uDD2E", new String[] {"spew", "vomit", "vomiting", "puke", "puking",
+                "disgust", "disgusting", "nasty"}, 8);
+
+        add("\uD83E\uDD27", new String[] {"gesundheit", "sneeze", "sneezing", "emotion", "emotions",
+            "emotional"}, 6);
+
+        add("\uD83E\uDD2F", new String[] {"awe", "shook", "amazed", "amazing"}, 4);
+
+        add("\uD83D\uDE24", new String[] {"irritated", "irritating", "angry", "proud", "empowered",
+            "empowering", "frustrated", "fuming", "steaming"}, 9);
+
+        add("\uD83D\uDC80", new String[] {"death", "dead", "die", "died", "dying", "skull",
+            "skeleton"}, 7);
+
+        add("✋", "✋🏻", "✋🏼", "✋🏽", "✋🏾", "✋🏿",
+                new String[] {"hand", "stop", "high-five"}, 3);
+
+        add("✌️", "✌🏻", "✌🏼", "✌🏽", "✌🏾", "✌🏿",
+                new String[] {"peace", "v", "2", "two"}, 4);
+
+        add("☝️", "☝🏻", "☝🏼", "☝🏽", "☝🏾", "☝🏿",
+                new String[] {"1", "one", "question", "secret", "up"}, 5);
+
+        add("🙏", "🙏🏻", "🙏🏼", "🙏🏽", "🙏🏾", "🙏🏿",
+                new String[] {"pray", "prayer", "praying", "please", "namaste"}, 5);
+
+        add("👀", new String[] {"eyes", "see", "seeing", "eyeballs"}, 4);
+
+        add("👶", "👶🏻", "👶🏼", "👶🏽", "👶🏾", "👶🏿",
+                new String[] {"baby", "infant", "toddler"}, 3);
+
+        add("👧", "👧🏻", "👧🏼", "👧🏽", "👧🏾", "👧🏿",
+                new String[] {"girl", "child"}, 2);
+
+        add("👦", "👦🏻", "👦🏼", "👦🏽", "👦🏾", "👦🏿",
+                new String[] {"boy", "child"}, 2);
+
+        add("👩", "👩🏻", "👩🏼", "👩🏽", "👩🏾", "👩🏿",
+                new String[] {"woman", "person", "female"}, 3);
+
+        add("👨", "👨🏻", "👨🏼", "👨🏽", "👨🏾", "👨🏿",
+                new String[] {"man", "person", "boi", "male"}, 4);
+
+        add("👩‍⚕️", "👩🏻‍⚕️", "👩🏼‍⚕️", "👩🏽‍⚕️",
+                "👩🏾‍⚕️", "👩🏿‍⚕️", "👨‍⚕️", "👨🏻‍⚕️",
+                "👨🏼‍⚕️", "👨🏽‍⚕️", "👨🏾‍⚕️", "👨🏿‍⚕️",
+                new String[] {"doctor", "dr", "nurse", "health-worker"}, 4);
     }
 }

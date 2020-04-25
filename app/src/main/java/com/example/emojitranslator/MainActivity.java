@@ -159,7 +159,8 @@ public class MainActivity extends AppCompatActivity
 
         for (int i = 0; i < vector.size(); ++i)
         {
-            if (Character.isLetter(vector.get(i).charAt(0)))
+            if (Character.isLetter(vector.get(i).charAt(0)) ||
+                    Character.isDigit(vector.get(i).charAt(0)))
             {
                 String emoji = emojis.searchEmojis(vector.get(i));
 

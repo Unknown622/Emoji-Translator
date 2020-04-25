@@ -186,10 +186,10 @@ public class EmojiList
                 new String[] {"hand", "stop", "high-five"}, 3);
 
         add("✌️", "✌🏻", "✌🏼", "✌🏽", "✌🏾", "✌🏿",
-                new String[] {"peace", "v"}, 2);
+                new String[] {"peace", "v", "2", "two"}, 4);
 
         add("☝️", "☝🏻", "☝🏼", "☝🏽", "☝🏾", "☝🏿",
-                new String[] {"question", "secret", "up"}, 3);
+                new String[] {"question", "secret", "up", "one", "1"}, 5);
 
         add("👌", "👌🏻", "👌🏼", "👌🏽", "👌🏾", "👌🏿",
                 new String[] {"ok", "okay", "perfect"}, 3);
@@ -222,7 +222,8 @@ public class EmojiList
         add("👩‍🏫", "👩🏻‍🏫", "👩🏼‍🏫", "👩🏽‍🏫",
                 "👩🏾‍🏫", "👩🏿‍🏫", "👨‍🏫", "👨🏻‍🏫",
                 "👨🏼‍🏫", "👨🏽‍🏫", "👨🏾‍🏫", "👨🏿‍🏫",
-                new String[] {"teacher", "professor", "prof", "tutor"}, 4);
+                new String[] {"teacher", "teach", "class", "classroom", "professor", "prof", "tutor"},
+                7);
 
         add("👩‍🔬", "👩🏻‍🔬", "👩🏼‍🔬", "👩🏽‍🔬",
                 "👩🏾‍🔬", "👩🏿‍🔬", "👨‍🔬", "👨🏻‍🔬",
@@ -240,10 +241,18 @@ public class EmojiList
                 "💁🏼‍♂️", "💁🏽‍♂️", "💁🏾‍♂️", "💁🏿‍♂️",
                 new String[] {"sass", "sassy", "sarcastic", "sarcasm"}, 4);
 
+        add("💪", "💪🏻", "💪🏼", "💪🏽", "💪🏾", "💪🏿",
+                new String[] {"muscle", "muscles", "strong", "best"}, 4);
+
         add("👨‍👩‍👧", new String[] {"family"}, 1);
 
         add("🗣", new String[] {"talk", "talking", "speak", "speaking", "shout", "shouting"},
                 6);
+
+        add("🙋‍♀️", "🙋🏻‍♀️", "🙋🏼‍♀️", "🙋🏽‍♀️",
+                "🙋🏾‍♀️", "🙋🏿‍♀️", "🙋‍♂️", "🙋🏻‍♂️",
+                "🙋🏼‍♂️", "🙋🏽‍♂️", "🙋🏾‍♂️", "🙋🏿‍♂️",
+                new String[] {"I", "Im", "I'm"}, 3);
 
         add("🚶‍♀️", "🚶🏻‍♀️", "🚶🏼‍♀️", "🚶🏽‍♀️",
                 "🚶🏾‍♀️", "🚶🏿‍♀️", "🚶‍♂️", "🚶🏻‍♂️",
@@ -258,6 +267,11 @@ public class EmojiList
         add("\uD83D\uDDA5️", new String[] {"computer", "desktop", "pc"}, 3);
 
         add("\uD83D\uDCBB", new String[] {"laptop", "notebook"}, 2);
+
+        add("\uD83D\uDCAF", new String[] {"100"}, 1);
+
+        add("✨", new String[] {"glitter", "shiny", "sparkle", "sparkles", "cool", "coolest"},
+                6);
 
         add("\uD83D\uDDD2️", new String[] {"notes", "note", "notepad"}, 3);
 

@@ -108,7 +108,7 @@ public class EmojiList
                 5);
 
         add("\uD83D\uDE42", new String [] {"fine", "patronizing", "patronize"},
-                1);
+                3);
 
         add("\uD83D\uDE43", new String[] {"silly", "sarcastic", "goofy", "ironic"},
                 4);
@@ -128,7 +128,7 @@ public class EmojiList
                 "adoration"}, 5);
 
         add("\uD83E\uDD29", new String[] {"excited", "excitement", "amazement", "amazed",
-                        "wow", "starstruck", "star-struck"}, 5);
+                        "wow", "starstruck", "star-struck"}, 7);
 
         add("\uD83D\uDE18", new String[] {"kiss", "kissing", "love"}, 3);
 
@@ -186,10 +186,13 @@ public class EmojiList
                 new String[] {"hand", "stop", "high-five"}, 3);
 
         add("✌️", "✌🏻", "✌🏼", "✌🏽", "✌🏾", "✌🏿",
-                new String[] {"peace", "v", "2", "two"}, 4);
+                new String[] {"peace", "v"}, 2);
 
         add("☝️", "☝🏻", "☝🏼", "☝🏽", "☝🏾", "☝🏿",
-                new String[] {"1", "one", "question", "secret", "up"}, 5);
+                new String[] {"question", "secret", "up"}, 3);
+
+        add("👌", "👌🏻", "👌🏼", "👌🏽", "👌🏾", "👌🏿",
+                new String[] {"ok", "okay", "perfect"}, 3);
 
         add("🙏", "🙏🏻", "🙏🏼", "🙏🏽", "🙏🏾", "🙏🏿",
                 new String[] {"pray", "prayer", "praying", "please", "namaste"}, 5);
@@ -215,5 +218,114 @@ public class EmojiList
                 "👩🏾‍⚕️", "👩🏿‍⚕️", "👨‍⚕️", "👨🏻‍⚕️",
                 "👨🏼‍⚕️", "👨🏽‍⚕️", "👨🏾‍⚕️", "👨🏿‍⚕️",
                 new String[] {"doctor", "dr", "nurse", "health-worker"}, 4);
+
+        add("👩‍🏫", "👩🏻‍🏫", "👩🏼‍🏫", "👩🏽‍🏫",
+                "👩🏾‍🏫", "👩🏿‍🏫", "👨‍🏫", "👨🏻‍🏫",
+                "👨🏼‍🏫", "👨🏽‍🏫", "👨🏾‍🏫", "👨🏿‍🏫",
+                new String[] {"teacher", "professor", "prof", "tutor"}, 4);
+
+        add("👩‍🔬", "👩🏻‍🔬", "👩🏼‍🔬", "👩🏽‍🔬",
+                "👩🏾‍🔬", "👩🏿‍🔬", "👨‍🔬", "👨🏻‍🔬",
+                "👨🏼‍🔬", "👨🏽‍🔬", "👨🏾‍🔬", "👨🏿‍🔬",
+                new String[] {"scientist"}, 1);
+
+        add("🙇‍♀️", "🙇🏻‍♀️", "🙇🏼‍♀️", "🙇🏽‍♀️",
+                "🙇🏾‍♀️", "🙇🏿‍♀️", "🙇‍♂️", "🙇🏻‍♂️",
+                "🙇🏼‍♂️", "🙇🏽‍♂️", "🙇🏾‍♂️", "🙇🏿‍♂️",
+                new String[] {"bow", "bowing", "favor", "sorry", "apology", "apologize"},
+                6);
+
+        add("💁‍♀️", "💁🏻‍♀️", "💁🏼‍♀️", "💁🏽‍♀️",
+                "💁🏾‍♀️", "💁🏿‍♀️", "💁‍♂️", "💁🏻‍♂️",
+                "💁🏼‍♂️", "💁🏽‍♂️", "💁🏾‍♂️", "💁🏿‍♂️",
+                new String[] {"sass", "sassy", "sarcastic", "sarcasm"}, 4);
+
+        add("👨‍👩‍👧", new String[] {"family"}, 1);
+
+        add("🗣", new String[] {"talk", "talking", "speak", "speaking", "shout", "shouting"},
+                6);
+
+        add("🚶‍♀️", "🚶🏻‍♀️", "🚶🏼‍♀️", "🚶🏽‍♀️",
+                "🚶🏾‍♀️", "🚶🏿‍♀️", "🚶‍♂️", "🚶🏻‍♂️",
+                "🚶🏼‍♂️", "🚶🏽‍♂️", "🚶🏾‍♂️", "🚶🏿‍♂️",
+                new String[] {"walk", "walking", "pedestrian"}, 3);
+
+        add("🏃‍♀️", "🏃🏻‍♀️", "🏃🏼‍♀️", "🏃🏽‍♀️",
+                "🏃🏾‍♀️", "🏃🏿‍♀️", "🏃‍♂️", "🏃🏻‍♂️",
+                "🏃🏼‍♂️", "🏃🏽‍♂️", "🏃🏾‍♂️", "🏃🏿‍♂️",
+                new String[] {"runner", "run", "running"}, 3);
+
+        add("\uD83D\uDDA5️", new String[] {"computer", "desktop", "pc"}, 3);
+
+        add("\uD83D\uDCBB", new String[] {"laptop", "notebook"}, 2);
+
+        add("\uD83D\uDDD2️", new String[] {"notes", "note", "notepad"}, 3);
+
+        add("\uD83D\uDCDA", new String[] {"book", "books", "textbook", "textbooks"},
+                4);
+
+        add("☀️", new String[] {"sun", "sunny", "sunshine"}, 3);
+
+        add("\uD83C\uDF19", new String[] {"moon", "night"}, 2);
+
+        add("⛅", new String[] {"cloud", "cloudy"}, 2);
+
+        add("⛈️", new String[] {"lightning", "thunder", "storm"}, 3);
+
+        add("\uD83C\uDF27️", new String[] {"rain", "raining", "rainy"}, 3);
+
+        add("\uD83C\uDF28️", new String[] {"snow", "snowing", "snowy"}, 3);
+
+        add("\uD83D\uDD25", new String[] {"hot", "fire", "flame", "lit", "excellent",
+                "attractive"}, 6);
+
+        add("\uD83D\uDCF1", new String[] {"phone", "smartphone", "iphone", "android"},
+                4);
+
+        add("\uD83D\uDCFA", new String[] {"TV", "television"}, 2);
+
+        add("\uD83D\uDFE5", new String[] {"red"}, 1);
+
+        add("\uD83D\uDFE7", new String[] {"orange"}, 1);
+
+        add("\uD83D\uDFE8", new String[] {"yellow"}, 1);
+
+        add("\uD83D\uDFE9", new String[] {"green"}, 1);
+
+        add("\uD83D\uDFE6", new String[] {"blue"}, 1);
+
+        add("\uD83D\uDFEA", new String[] {"purple"}, 1);
+
+        add("\uD83D\uDFEB", new String[] {"brown"}, 1);
+
+        add("⬛", new String[] {"black"}, 1);
+
+        add("⬜", new String[] {"white"}, 1);
+
+        add("0️⃣", new String[] {"zero", "0"}, 2);
+
+        add("1️⃣", new String[] {"one", "1"}, 2);
+
+        add("2️⃣", new String[] {"two", "2"}, 2);
+
+        add("3️⃣", new String[] {"three", "3"}, 2);
+
+        add("4️⃣", new String[] {"four", "4"}, 2);
+
+        add("5️⃣", new String[] {"five", "5"}, 2);
+
+        add("6️⃣", new String[] {"six", "6"}, 2);
+
+        add("7️⃣", new String[] {"seven", "7"}, 2);
+
+        add("8️⃣", new String[] {"eight", "8"}, 2);
+
+        add("9️⃣", new String[] {"nine", "9"}, 2);
+
+        add("\uD83D\uDD1F", new String[] {"ten", "10"}, 2);
+
+        add("🐶", new String[] {"dog", "puppy"}, 2);
+
+        add("\uD83D\uDC31", new String[] {"cat", "kitty", "kitten"}, 3);
     }
 }

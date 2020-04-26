@@ -12,7 +12,6 @@ import android.widget.*;
 import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.Vector;
-import android.app.Activity;
 import android.view.inputmethod.*;
 
 public class MainActivity extends AppCompatActivity
@@ -119,7 +118,9 @@ public class MainActivity extends AppCompatActivity
     public void hideKeyboard()
     {
         View view = this.getCurrentFocus();
-        if (view != null) {
+
+        if (view != null)
+        {
             InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
@@ -195,7 +196,7 @@ public class MainActivity extends AppCompatActivity
         for (int i = 0; i < string.length(); ++i)
         {
             if (Character.isLetter(string.charAt(i)) || Character.isDigit(string.charAt(i)) ||
-                string.charAt(i) == '-')
+                string.charAt(i) == '-' || string.charAt(i) == '\'')
                 word += string.charAt(i);
 
             else
